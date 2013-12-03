@@ -1,13 +1,27 @@
-$document.ready(function() {
+var timeline = document.querySelector('#timeline_tab_content');
+// $(document).ready(function() {
 
-$('uiUnifiedstory').remove();
-	console.log('hi');
-});
+// var content = $('.fbTimelineUnit');
 
-// var deletePost = function(post){
+// content.remove();
 
-// 	post.remove();
+//     }
+// );
 
-// }
+// var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
-// $document.ready( deletePost($post) );
+var observer = new MutationObserver(function(mutations) {
+
+	mutations.forEach(function(mutation) {
+
+		console.log(mutation.type);
+		
+		
+    });
+ });
+
+var config = { attributes: true, childList: true, characterData: true, subtree: true };
+
+observer.observe(timeline, config);
+
+

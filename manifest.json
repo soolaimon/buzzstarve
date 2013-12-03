@@ -5,9 +5,11 @@
 	"description": "Blocks Facebook posts linking to buzzefeed.com.",
 	"version": "1.0",
 
+	"permissions": ["*://*.facebook.com/*" ],
+
 	"content_scripts": [
 		{
-			"matches": [ "*://www.facebook.com/*" ],
+			"matches": [ "*://*.facebook.com/*" ],
 			"js": [ "jquery-2.0.3.min.js", "block.js" ]
 		}
 
