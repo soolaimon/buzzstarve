@@ -7,6 +7,10 @@
 
 	"permissions": ["*://*.facebook.com/*" ],
 
+	// "web_accessible_resources": [
+	// 	"mutation-summary.js"
+	// ],
+
 	"content_scripts": [
 		{
 			"matches": [ "*://*.facebook.com/*" ],

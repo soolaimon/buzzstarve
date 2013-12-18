@@ -1,4 +1,4 @@
-var timeline = document.querySelector('#timeline_tab_content');
+// var timeline = document.querySelector('#timeline_tab_content');
 // $(document).ready(function() {
 
 // var content = $('.fbTimelineUnit');
@@ -8,20 +8,26 @@ var timeline = document.querySelector('#timeline_tab_content');
 //     }
 // );
 
-// var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+console.log('hi');
+var observer = new MutationSummary({
 
-var observer = new MutationObserver(function(mutations) {
+			callback: rmPosts,
+			queries: [{class: '.fbTimelineUnit'}]
 
-	mutations.forEach(function(mutation) {
-
-		console.log(mutation.type);
+			
+		}
 		
-		
-    });
- });
+    );
 
-var config = { attributes: true, childList: true, characterData: true, subtree: true };
+function rmPosts(summaries){
 
-observer.observe(timeline, config);
+	var summary = summaries[0];
+	console.log('hey');
+	console.log(summary);
+
+}
+
+
+// observer.observe(timeline, config);
 
 
